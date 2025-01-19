@@ -1,5 +1,5 @@
 import styles from './BlogCard.module.css';
-import formattedDate from '../utils/formattedDate';
+import { formatDateDistance } from '../utils/formattedDate';
 
 const BlogCard = ({
   poster,
@@ -10,7 +10,7 @@ const BlogCard = ({
   avatar,
   postedAt,
 }) => {
-  const date = formattedDate(postedAt);
+  const date = formatDateDistance(postedAt);
 
   return (
     <div className={styles.card}>

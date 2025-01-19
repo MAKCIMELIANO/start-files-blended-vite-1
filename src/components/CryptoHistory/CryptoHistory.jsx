@@ -1,4 +1,4 @@
-import { format } from 'date-fns';
+import { formatDate } from '../utils/formattedDate';
 import style from './CryptoHistory.module.css';
 
 const CryptoHistory = ({ items }) => {
@@ -19,9 +19,7 @@ const CryptoHistory = ({ items }) => {
             <td className={style.td}>{index + 1}</td>
             <td className={style.td}>{item.price}</td>
             <td className={style.td}>{item.amount}</td>
-            <td className={style.td}>
-              {format(new Date(item.date), 'dd/MM/yyyy')}
-            </td>
+            <td className={style.td}>{formatDate(item.date)}</td>
           </tr>
         ))}
       </tbody>
