@@ -9,3 +9,10 @@
   font-weight: 900;
   color: var(--color-accent);
 }
+
+.icon {
+  /* Пример отступа справа */
+  color: #007bff;
+  /* Пример цвета */
+
+}
